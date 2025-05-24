@@ -1,9 +1,15 @@
 :root {
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+
   --toggle: hsl(230, 22%, 74%);
   --title-text: hsl(230, 17%, 14%);
   --blue-text: hsl(228, 12%, 44%);
   --darkmood-bg: hsl(231, 8%, 70%);
   --darkmood-bg-btn: hsl(0, 0%, 100%);
+
+  --header-bg: hsl(225, 100%, 98%);
+  --card-bg: hsl(227, 47%, 96%);
 }
 html {
   box-sizing: border-box;
@@ -34,13 +40,21 @@ input {
 
 .header {
   width: 100%;
-  padding: 2.5rem 0;
+  background-color: var(--header-bg);
 }
 .header__wraper {
   width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header-top {
+  width: 100%;
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1.5rem 0 0;
 }
 .header-title__name {
   font-size: 14px;
@@ -77,6 +91,7 @@ input {
   background-color: var(--darkmood-bg);
   position: relative;
   transition: all 250ms ease-in 20ms;
+  cursor: pointer;
 }
 .header-darkmood__btn::after {
   content: "";
@@ -104,4 +119,81 @@ input {
     hsl(210, 78%, 56%),
     hsl(146, 68%, 55%)
   );
+}
+
+/* Header Bottom */
+
+.header-bottom {
+  width: 100%;
+  height: 10rem;
+}
+.social-accounts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.social-account {
+  width: 100%;
+  background-color: var(--card-bg);
+  text-align: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  transform: translateY(15%);
+  border-top: 5px solid white;
+}
+.facebook {
+  border-top: 5px solid hsl(208, 92%, 53%);
+}
+.twitter {
+  border-top: 5px solid hsl(203, 89%, 53%);
+}
+.instagram {
+  border-top: 5px solid transparent;
+  background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+    linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) border-box;
+}
+.youtube {
+  border-top: 5px solid hsl(348, 97%, 39%);
+}
+.social-account__username {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 0.5rem;
+}
+.social-account__username p {
+  font-size: 0.8rem;
+}
+.social-account__num {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 1.2rem;
+}
+.social-account__type p {
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-size: 0.8rem;
+  color: var(--blue-text);
+}
+.social-account__status {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.green {
+  color: var(--lime-green);
+}
+.red {
+  color: var(--bright-red);
+}
+.social-account__status-icon img {
+  display: block;
+}
+.social-account__status-text {
+  font-weight: 600;
+  font-size: 0.9rem;
 }
