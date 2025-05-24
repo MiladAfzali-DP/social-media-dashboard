@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -25,7 +31,28 @@
       }
     </style>
   </head>
-  <body>
+  <body class="body">
+    <header class="header">
+      <div class="container">
+        <div class="header__wraper">
+          <div class="header-title">
+            <div class="header-title__name">
+              <h1>social media dashboard</h1>
+            </div>
+            <div class="header-title__total-followers">
+              <span>total followers:</span>
+              <span id="totalFollowers">23,000</span>
+            </div>
+          </div>
+          <div class="header-darkmood">
+            <div class="header-darkmood__text">
+              <span> dark mood </span>
+            </div>
+            <div class="header-darkmood__btn"></div>
+          </div>
+        </div>
+      </div>
+    </header>
     <!-- Social Media Dashboard
   Total Followers: 23,004
 
