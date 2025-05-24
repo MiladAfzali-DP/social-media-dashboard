@@ -131,10 +131,11 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 .social-account {
-  width: 100%;
+  width: 18.5rem;
   background-color: var(--card-bg);
   text-align: center;
   padding: 2rem;
@@ -211,40 +212,10 @@ input {
   font-size: 0.9rem;
 }
 
-@media (max-width: 540px) {
-  .container {
-    width: 85%;
-  }
-  .header-top {
-    flex-direction: column;
-    /* gap: 2rem; */
-    align-items: start;
-  }
-  .header-title {
-    width: 100%;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--blue-text);
-  }
-  .header-title__name {
-    font-size: 12px;
-  }
-  .header-darkmood {
-    width: 100%;
-    padding-top: 1rem;
-    justify-content: space-between;
-  }
-
-  .social-accounts {
-    flex-direction: column;
-  }
-}
-
 /* Main */
 
 .main {
   padding: 12rem 0 5rem;
-}
-.main__wraper {
 }
 .main__title {
   font-size: 16px;
@@ -263,6 +234,18 @@ input {
   padding: 1.8rem;
   background-color: var(--card-bg);
   border-radius: 0.3rem;
+  position: relative;
+  overflow: hidden;
+}
+.overview-item::after {
+  content: "";
+  visibility: hidden;
+  position: absolute;
+  inset: 0;
+  background-color: var(--toggle);
+}
+.overview-item:hover::after {
+  visibility: visible;
 }
 .overview-item__top {
   display: flex;
@@ -299,4 +282,46 @@ input {
 .overview-item__bottom-status__text {
   font-weight: 600;
   font-size: 0.9rem;
+}
+
+@media (max-width: 540px) {
+  .container {
+    width: 85%;
+  }
+  .header-top {
+    flex-direction: column;
+    /* gap: 2rem; */
+    align-items: start;
+  }
+  .header-title {
+    width: 100%;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--blue-text);
+  }
+  .header-title__name {
+    font-size: 12px;
+  }
+  .header-darkmood {
+    width: 100%;
+    padding-top: 1rem;
+    justify-content: space-between;
+  }
+
+  .social-accounts {
+    flex-direction: column;
+  }
+  .social-account {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .main {
+    margin-top: 50rem;
+  }
+  .overview {
+    flex-direction: column;
+  }
+  .overview-item {
+    width: 100%;
+  }
 }
