@@ -56,6 +56,9 @@ input {
   align-items: center;
   padding: 1.5rem 0 0;
 }
+.header-title {
+  width: 100%;
+}
 .header-title__name {
   font-size: 14px;
   text-transform: capitalize;
@@ -74,6 +77,7 @@ input {
   font-weight: 400;
 }
 .header-darkmood {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -196,4 +200,30 @@ input {
 .social-account__status-text {
   font-weight: 600;
   font-size: 0.9rem;
+}
+
+@media (max-width: 540px) {
+  .container {
+    width: 85%;
+  }
+  .header-top {
+    flex-direction: column;
+    /* gap: 2rem; */
+    align-items: start;
+  }
+  .header-title {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--blue-text);
+  }
+  .header-title__name {
+    font-size: 12px;
+  }
+  .header-darkmood {
+    padding-top: 1rem;
+    justify-content: space-between;
+  }
+
+  .social-accounts {
+    flex-direction: column;
+  }
 }
