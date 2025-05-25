@@ -8,7 +8,6 @@ export default function darkmood() {
     const darkmoodOnOff = document.body.classList.contains("darkmood")
       ? true
       : false;
-    console.log(darkmoodOnOff);
 
     if (darkmoodOnOff) {
       this.classList.add("darkmood-bg-on");
