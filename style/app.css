@@ -6,10 +6,13 @@
   --title-text: hsl(230, 17%, 14%);
   --blue-text: hsl(228, 12%, 44%);
   --darkmood-bg: hsl(231, 8%, 70%);
-  --darkmood-bg-btn: hsl(0, 0%, 100%);
 
   --header-bg: hsl(225, 100%, 98%);
   --card-bg: hsl(227, 47%, 96%);
+
+  --bg-body: hsl(0, 0%, 100%);
+
+  --Effect: all 250ms ease-in;
 }
 html {
   box-sizing: border-box;
@@ -24,6 +27,8 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
+  background-color: var(--bg-body);
+  transition: var(--Effect);
 }
 button,
 input {
@@ -41,6 +46,7 @@ input {
 .header {
   width: 100%;
   background-color: var(--header-bg);
+  transition: var(--Effect);
 }
 .header__wraper {
   width: 100%;
@@ -60,12 +66,14 @@ input {
   font-size: 14px;
   text-transform: capitalize;
   color: var(--title-text);
+  transition: var(--Effect);
 }
 .header-title__total-followers {
   margin-top: 0.4rem;
   font-weight: bold;
   text-transform: capitalize;
   color: var(--blue-text);
+  transition: var(--Effect);
 }
 .header-title__total-followers span:nth-of-type(1) {
   font-weight: 700;
@@ -82,6 +90,7 @@ input {
 .header-darkmood__text {
   text-transform: capitalize;
   color: var(--blue-text);
+  transition: var(--Effect);
   font-weight: bold;
 }
 .header-darkmood__btn {
@@ -93,10 +102,10 @@ input {
   transition: all 250ms ease-in 20ms;
   cursor: pointer;
 }
-.header-darkmood__btn::after {
+.header-darkmood__btn-circle {
   content: "";
   display: block;
-  background-color: var(--darkmood-bg-btn);
+  background-color: var(--header-bg);
   width: 1.3rem;
   height: 1.3rem;
   border-radius: 50%;
@@ -106,14 +115,12 @@ input {
   right: 0.25rem;
   margin: auto 0;
   z-index: 1;
-  transition: all 250ms ease-in 20ms;
+  transition: var(--Effect);
 }
-
-.header-darkmood__btn:hover:after {
+.darkmood-circle-on {
   right: 2rem;
 }
-
-.header-darkmood__btn:hover {
+.darkmood-bg-on {
   background-image: linear-gradient(
     to right bottom,
     hsl(210, 78%, 56%),
@@ -176,6 +183,8 @@ input {
   align-items: center;
   flex-direction: row-reverse;
   gap: 0.5rem;
+  color: var(--blue-text);
+  transition: var(--Effect);
 }
 .social-account__username p {
   font-size: 0.8rem;
@@ -184,12 +193,15 @@ input {
   font-size: 4rem;
   font-weight: bold;
   margin-top: 1.2rem;
+  color: var(--title-text);
+  transition: var(--Effect);
 }
 .social-account__type p {
   text-transform: uppercase;
   letter-spacing: 0.4em;
   font-size: 0.8rem;
   color: var(--blue-text);
+  transition: var(--Effect);
 }
 .social-account__status {
   margin-top: 1.5rem;
@@ -219,7 +231,8 @@ input {
 }
 .main__title {
   font-size: 16px;
-  color: var(--blue-text);
+  color: var(--title-text);
+  transition: var(--Effect);
 }
 .overview {
   margin-top: 2rem;
@@ -249,6 +262,7 @@ input {
   text-transform: capitalize;
   font-weight: 600;
   color: var(--blue-text);
+  transition: var(--Effect);
 }
 .overview-item__top img {
   width: 1.4rem;
@@ -262,6 +276,8 @@ input {
 .overview-item__bottom-num {
   font-size: 2.5rem;
   font-weight: 600;
+  color: var(--title-text);
+  transition: var(--Effect);
 }
 .overview-item__bottom-status {
   display: flex;
@@ -290,6 +306,7 @@ input {
     width: 100%;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--blue-text);
+    transition: var(--Effect);
   }
   .header-title__name {
     font-size: 12px;
