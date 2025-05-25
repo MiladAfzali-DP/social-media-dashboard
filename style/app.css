@@ -237,15 +237,8 @@ input {
   position: relative;
   overflow: hidden;
 }
-.overview-item::after {
-  content: "";
-  visibility: hidden;
-  position: absolute;
-  inset: 0;
+.overview-item:hover {
   background-color: var(--toggle);
-}
-.overview-item:hover::after {
-  visibility: visible;
 }
 .overview-item__top {
   display: flex;
