@@ -303,13 +303,15 @@ input {
   font-size: 0.9rem;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 599px) {
   .container {
     width: 85%;
   }
+  .header::before {
+    display: none;
+  }
   .header-top {
     flex-direction: column;
-    /* gap: 2rem; */
     align-items: start;
   }
   .header-title {
@@ -336,12 +338,65 @@ input {
   }
 
   .main {
-    margin-top: 50rem;
+    /* margin-top: 50rem; */
   }
   .overview {
     flex-direction: column;
   }
   .overview-item {
     width: 100%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 769px) {
+  .container {
+    width: 90%;
+  }
+  .header::before {
+    display: none;
+  }
+  .social-accounts {
+    gap: 1rem !important;
+  }
+  .social-account {
+    width: 16.3rem;
+    padding: 1.2rem;
+  }
+  .social-account__num {
+    font-size: 3.2rem;
+    margin-top: 0.5rem;
+  }
+  .social-account__type p {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.8rem;
+    color: var(--blue-text);
+    transition: var(--Effect);
+  }
+  .overview {
+    gap: 1rem;
+  }
+  .overview-item {
+    width: 16.3rem;
+    padding: 1.2rem;
+  }
+  .overview-item__bottom-num {
+    font-size: 2.2rem;
+  }
+  .overview-item__top p {
+    text-transform: capitalize;
+    font-weight: 600;
+    color: var(--blue-text);
+    transition: var(--Effect);
+    font-size: 1rem;
+  }
+  .overview-item__top img {
+    width: 1.3rem;
+  }
+}
+
+@media (min-width: 770px) and (max-width: 991px) {
+  .container {
+    width: 85%;
   }
 }
