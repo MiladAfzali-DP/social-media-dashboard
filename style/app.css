@@ -281,6 +281,7 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: end;
+  flex-wrap: wrap;
   margin-top: 1.5rem;
 }
 .overview-item__bottom-num {
@@ -293,6 +294,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.3rem;
 }
 .overview-item__bottom-status__icon img {
@@ -398,5 +400,58 @@ input {
 @media (min-width: 770px) and (max-width: 991px) {
   .container {
     width: 85%;
+  }
+  .header::before {
+    display: none;
+  }
+  .social-account {
+    width: 19.6rem;
+  }
+  .overview-item {
+    width: 19.6rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header::before {
+    display: none;
+  }
+  .social-accounts {
+    gap: 1rem !important;
+  }
+  .social-account {
+    width: 15.5rem;
+    padding: 1.5rem;
+  }
+  .social-account__num {
+    font-size: 3.2rem;
+    margin-top: 0.5rem;
+  }
+  .social-account__type p {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.8rem;
+    color: var(--blue-text);
+    transition: var(--Effect);
+  }
+  .overview {
+    gap: 1rem;
+  }
+  .overview-item {
+    width: 15.5rem;
+    padding: 1.5rem;
+  }
+  .overview-item__bottom-num {
+    font-size: 2.2rem;
+  }
+  .overview-item__top p {
+    text-transform: capitalize;
+    font-weight: 600;
+    color: var(--blue-text);
+    transition: var(--Effect);
+    font-size: 1rem;
+  }
+  .overview-item__top img {
+    width: 1.3rem;
   }
 }
